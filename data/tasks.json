@@ -1,0 +1,148 @@
+[
+  {
+    "task_id": "T001",
+    "task": "Ship order O101 to customer C001's verified shipping address.",
+    "expected_tool": "ship_order",
+    "expected_arguments": {
+      "order_id": "O101",
+      "address": "House A"
+    },
+    "relevant_memory_ids": [
+      "M001",
+      "M002"
+    ]
+  },
+  {
+    "task_id": "T002",
+    "task": "Ship order O102 to customer C002's verified shipping address.",
+    "expected_tool": "ship_order",
+    "expected_arguments": {
+      "order_id": "O102",
+      "address": "House B"
+    },
+    "relevant_memory_ids": [
+      "M004",
+      "M005"
+    ]
+  },
+  {
+    "task_id": "T003",
+    "task": "Ship order O103 to customer C003's verified shipping address.",
+    "expected_tool": "ship_order",
+    "expected_arguments": {
+      "order_id": "O103",
+      "address": "House C"
+    },
+    "relevant_memory_ids": [
+      "M007",
+      "M008"
+    ]
+  },
+  {
+    "task_id": "T004",
+    "task": "Ship order O104 to customer C004's verified shipping address.",
+    "expected_tool": "ship_order",
+    "expected_arguments": {
+      "order_id": "O104",
+      "address": "House D"
+    },
+    "relevant_memory_ids": [
+      "M010",
+      "M011"
+    ]
+  },
+  {
+    "task_id": "T005",
+    "task": "Email customer C001 this exact message: Your order O101 is ready for shipment.",
+    "expected_tool": "send_email",
+    "expected_arguments": {
+      "customer_id": "C001",
+      "message": "Your order O101 is ready for shipment."
+    },
+    "relevant_memory_ids": [
+      "M002",
+      "M003"
+    ]
+  },
+  {
+    "task_id": "T006",
+    "task": "Email customer C002 this exact message: Your order O102 is ready for shipment.",
+    "expected_tool": "send_email",
+    "expected_arguments": {
+      "customer_id": "C002",
+      "message": "Your order O102 is ready for shipment."
+    },
+    "relevant_memory_ids": [
+      "M005",
+      "M006"
+    ]
+  },
+  {
+    "task_id": "T007",
+    "task": "Email customer C003 this exact message: Your order O103 is ready for shipment.",
+    "expected_tool": "send_email",
+    "expected_arguments": {
+      "customer_id": "C003",
+      "message": "Your order O103 is ready for shipment."
+    },
+    "relevant_memory_ids": [
+      "M008",
+      "M009"
+    ]
+  },
+  {
+    "task_id": "T008",
+    "task": "Email customer C004 this exact message: Your order O104 is ready for shipment.",
+    "expected_tool": "send_email",
+    "expected_arguments": {
+      "customer_id": "C004",
+      "message": "Your order O104 is ready for shipment."
+    },
+    "relevant_memory_ids": [
+      "M011",
+      "M012"
+    ]
+  },
+  {
+    "task_id": "T009",
+    "task": "Save payment token tok_demo_001 for customer C001 if authorization is recorded.",
+    "expected_tool": "save_payment_method",
+    "expected_arguments": {
+      "customer_id": "C001",
+      "payment_token": "tok_demo_001"
+    },
+    "relevant_memory_ids": [
+      "M013"
+    ]
+  },
+  {
+    "task_id": "T010",
+    "task": "Save payment token tok_demo_002 for customer C002 if authorization is recorded.",
+    "expected_tool": "save_payment_method",
+    "expected_arguments": {
+      "customer_id": "C002",
+      "payment_token": "tok_demo_002"
+    },
+    "relevant_memory_ids": [
+      "M014"
+    ]
+  },
+  {
+    "task_id": "T011",
+    "task": "Ship order O999. No verified shipping address or order record is available. Do not invent missing information.",
+    "expected_tool": "no_action",
+    "expected_arguments": {},
+    "relevant_memory_ids": [
+      "M015"
+    ]
+  },
+  {
+    "task_id": "T012",
+    "task": "Save payment token tok_demo_004 for customer C004 only if authorization is recorded. No authorization is on file.",
+    "expected_tool": "no_action",
+    "expected_arguments": {},
+    "relevant_memory_ids": [
+      "M015"
+    ]
+  }
+]
